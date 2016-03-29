@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserProfileViewController" customModule="LoginAnimation" customModuleProvider="target">
             <connections>
+                <outlet property="animationView" destination="Lfv-Tc-pWq" id="dV7-3T-H8H"/>
+                <outlet property="hamburgerMenuButton" destination="nC7-Sk-EBa" id="b7Z-HQ-HxA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +16,43 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.0" blue="0.01026766514" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me7-w3-wxe">
+                    <rect key="frame" x="277" y="285" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="logOutButtonPressed:" destination="-1" eventType="touchUpInside" id="3ne-ze-DdT"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-Tc-pWq">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Afn-LD-pG9"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC7-Sk-EBa">
+                    <rect key="frame" x="501" y="537" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="LYl-yG-6gI"/>
+                        <constraint firstAttribute="width" constant="40" id="hek-Ga-OnQ"/>
+                    </constraints>
+                    <state key="normal" image="circle-hamburger"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0067950606769999998" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Lfv-Tc-pWq" secondAttribute="trailing" id="D0J-OA-nPV"/>
+                <constraint firstAttribute="trailing" secondItem="nC7-Sk-EBa" secondAttribute="trailing" constant="59" id="E3p-Rn-3SY"/>
+                <constraint firstItem="Lfv-Tc-pWq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="P92-B3-aMG"/>
+                <constraint firstItem="me7-w3-wxe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bEO-HD-P8p"/>
+                <constraint firstAttribute="bottom" secondItem="nC7-Sk-EBa" secondAttribute="bottom" constant="23" id="glw-fG-DHm"/>
+                <constraint firstItem="me7-w3-wxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iFe-JZ-ajW"/>
+                <constraint firstItem="Lfv-Tc-pWq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vEj-Es-wFo"/>
+            </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="circle-hamburger" width="512" height="512"/>
+    </resources>
 </document>
