@@ -24,6 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setRootViewController(rootVC: UIViewController) {
-        window?.rootViewController = UINavigationController(rootViewController: rootVC)
+        window?.rootViewController = rootVC
     }
 }
