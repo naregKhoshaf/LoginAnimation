@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		3DDDE8701CAB250E00A4E03B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDE86F1CAB250E00A4E03B /* AppDelegate.swift */; };
-		3DDDE8721CAB250E00A4E03B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDE8711CAB250E00A4E03B /* ViewController.swift */; };
-		3DDDE8751CAB250E00A4E03B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDE8731CAB250E00A4E03B /* Main.storyboard */; };
 		3DDDE8771CAB250E00A4E03B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDE8761CAB250E00A4E03B /* Assets.xcassets */; };
 		3DDDE87A1CAB250E00A4E03B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDE8781CAB250E00A4E03B /* LaunchScreen.storyboard */; };
 		3DDDE8851CAB250E00A4E03B /* LoginAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDE8841CAB250E00A4E03B /* LoginAnimationTests.swift */; };
 		3DDDE8901CAB250E00A4E03B /* LoginAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDE88F1CAB250E00A4E03B /* LoginAnimationUITests.swift */; };
+		3DDDE89F1CAB255F00A4E03B /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDE89D1CAB255F00A4E03B /* LogInViewController.swift */; };
+		3DDDE8A01CAB255F00A4E03B /* LogInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDE89E1CAB255F00A4E03B /* LogInViewController.xib */; };
+		3DDDE8A31CAB257400A4E03B /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDDE8A11CAB257400A4E03B /* UserProfileViewController.swift */; };
+		3DDDE8A41CAB257400A4E03B /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDE8A21CAB257400A4E03B /* UserProfileViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,6 @@
 /* Begin PBXFileReference section */
 		3DDDE86C1CAB250E00A4E03B /* LoginAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDDE86F1CAB250E00A4E03B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DDDE8711CAB250E00A4E03B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3DDDE8741CAB250E00A4E03B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DDDE8761CAB250E00A4E03B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DDDE8791CAB250E00A4E03B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3DDDE87B1CAB250E00A4E03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +47,10 @@
 		3DDDE88B1CAB250E00A4E03B /* LoginAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDDE88F1CAB250E00A4E03B /* LoginAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAnimationUITests.swift; sourceTree = "<group>"; };
 		3DDDE8911CAB250E00A4E03B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DDDE89D1CAB255F00A4E03B /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3DDDE89E1CAB255F00A4E03B /* LogInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
+		3DDDE8A11CAB257400A4E03B /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		3DDDE8A21CAB257400A4E03B /* UserProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				3DDDE86F1CAB250E00A4E03B /* AppDelegate.swift */,
-				3DDDE8711CAB250E00A4E03B /* ViewController.swift */,
-				3DDDE8731CAB250E00A4E03B /* Main.storyboard */,
+				3DDDE89D1CAB255F00A4E03B /* LogInViewController.swift */,
+				3DDDE89E1CAB255F00A4E03B /* LogInViewController.xib */,
+				3DDDE8A11CAB257400A4E03B /* UserProfileViewController.swift */,
+				3DDDE8A21CAB257400A4E03B /* UserProfileViewController.xib */,
 				3DDDE8761CAB250E00A4E03B /* Assets.xcassets */,
 				3DDDE8781CAB250E00A4E03B /* LaunchScreen.storyboard */,
 				3DDDE87B1CAB250E00A4E03B /* Info.plist */,
@@ -230,8 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DDDE87A1CAB250E00A4E03B /* LaunchScreen.storyboard in Resources */,
+				3DDDE8A41CAB257400A4E03B /* UserProfileViewController.xib in Resources */,
 				3DDDE8771CAB250E00A4E03B /* Assets.xcassets in Resources */,
-				3DDDE8751CAB250E00A4E03B /* Main.storyboard in Resources */,
+				3DDDE8A01CAB255F00A4E03B /* LogInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DDDE8721CAB250E00A4E03B /* ViewController.swift in Sources */,
+				3DDDE89F1CAB255F00A4E03B /* LogInViewController.swift in Sources */,
+				3DDDE8A31CAB257400A4E03B /* UserProfileViewController.swift in Sources */,
 				3DDDE8701CAB250E00A4E03B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,14 +301,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3DDDE8731CAB250E00A4E03B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3DDDE8741CAB250E00A4E03B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3DDDE8781CAB250E00A4E03B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
