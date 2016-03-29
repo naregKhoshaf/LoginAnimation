@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Charts
 
 var loggedIn = false
 

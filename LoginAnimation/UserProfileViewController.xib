@@ -32,10 +32,10 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC7-Sk-EBa">
-                    <rect key="frame" x="501" y="537" width="40" height="40"/>
+                    <rect key="frame" x="510" y="510" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="40" id="LYl-yG-6gI"/>
-                        <constraint firstAttribute="width" constant="40" id="hek-Ga-OnQ"/>
+                        <constraint firstAttribute="height" constant="60" id="LYl-yG-6gI"/>
+                        <constraint firstAttribute="width" constant="60" id="hek-Ga-OnQ"/>
                     </constraints>
                     <state key="normal" image="circle-hamburger"/>
                 </button>
@@ -43,10 +43,10 @@
             <color key="backgroundColor" red="0.0067950606769999998" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="Lfv-Tc-pWq" secondAttribute="trailing" id="D0J-OA-nPV"/>
-                <constraint firstAttribute="trailing" secondItem="nC7-Sk-EBa" secondAttribute="trailing" constant="59" id="E3p-Rn-3SY"/>
+                <constraint firstAttribute="trailing" secondItem="nC7-Sk-EBa" secondAttribute="trailing" constant="30" id="E3p-Rn-3SY"/>
                 <constraint firstItem="Lfv-Tc-pWq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="P92-B3-aMG"/>
                 <constraint firstItem="me7-w3-wxe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bEO-HD-P8p"/>
-                <constraint firstAttribute="bottom" secondItem="nC7-Sk-EBa" secondAttribute="bottom" constant="23" id="glw-fG-DHm"/>
+                <constraint firstAttribute="bottom" secondItem="nC7-Sk-EBa" secondAttribute="bottom" constant="30" id="glw-fG-DHm"/>
                 <constraint firstItem="me7-w3-wxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iFe-JZ-ajW"/>
                 <constraint firstItem="Lfv-Tc-pWq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vEj-Es-wFo"/>
             </constraints>
