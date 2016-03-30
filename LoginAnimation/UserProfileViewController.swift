@@ -42,13 +42,12 @@ class UserProfileViewController: UIViewController {
     private func viewDidLoadSetup() {
         days = ["M", "T", "W", "T", "F", "S", "S"]
         let unitsSold = [1.0, 0.0, 0.0, 3.0, 2.0, 0.0, 0.0]
-        
         setChart(days, values: unitsSold)
     }
     
     private func viewWIllAppearSetup() {
         
-        hamburgerMenuButton.transform = CGAffineTransformMakeScale(2, 2)
+        hamburgerMenuButton.transform = CGAffineTransformMakeScale(1.5, 1.5)
         animationView.frame.size.height = UIScreen.mainScreen().bounds.height
         searchButton.alpha = 0
         
@@ -64,20 +63,18 @@ class UserProfileViewController: UIViewController {
     private func setChart(dataPoints: [String], values: [Double]) {
         var dataEntries: [BarChartDataEntry] = []
 
-        barChartView.noDataText = "No Data"
-        barChartView.descriptionText = ""
-        
         for i in 0..<dataPoints.count {
             let dataEntry = BarChartDataEntry(value: values[i], xIndex: i)
             dataEntries.append(dataEntry)
         }
         
         let chartDataSet = BarChartDataSet(yVals: dataEntries, label: "")
-        chartDataSet.colors = [UIColor(red: 0, green: 164/255, blue: 0, alpha: 1)]
         let chartData = BarChartData(xVals: days, dataSet: chartDataSet)
-        barChartView.data = chartData
         
-        barChartView.animate(yAxisDuration: 2.2, easingOption: .EaseOutQuart)
+        chartDataSet.colors = [UIColor(red: 0, green: 164/255, blue: 0, alpha: 1)]
+        barChartView.data = chartData
+        barChartView.noDataText = "No Data"
+        barChartView.descriptionText = ""
     }
     
     @IBAction func logOutButtonPressed(sender: AnyObject) {
