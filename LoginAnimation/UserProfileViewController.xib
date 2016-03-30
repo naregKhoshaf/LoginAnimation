@@ -8,7 +8,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UserProfileViewController" customModule="LoginAnimation" customModuleProvider="target">
             <connections>
                 <outlet property="animationView" destination="Lfv-Tc-pWq" id="dV7-3T-H8H"/>
+                <outlet property="barChartView" destination="fBL-ji-jA0" id="gPt-KL-HT6"/>
                 <outlet property="hamburgerMenuButton" destination="nC7-Sk-EBa" id="b7Z-HQ-HxA"/>
+                <outlet property="searchButton" destination="me7-w3-wxe" id="xNI-fb-Ant"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,18 +19,35 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me7-w3-wxe">
-                    <rect key="frame" x="277" y="285" width="46" height="30"/>
-                    <state key="normal" title="Button"/>
-                    <connections>
-                        <action selector="logOutButtonPressed:" destination="-1" eventType="touchUpInside" id="3ne-ze-DdT"/>
-                    </connections>
-                </button>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-Tc-pWq">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-ji-jA0" customClass="BarChartView" customModule="Charts">
+                    <rect key="frame" x="0.0" y="85" width="600" height="200"/>
+                    <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Afn-LD-pG9"/>
+                        <constraint firstAttribute="height" constant="200" id="nuY-e2-dls"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-Tc-pWq">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="me7-w3-wxe">
+                            <rect key="frame" x="530" y="15" width="30" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="5BO-od-5nf"/>
+                                <constraint firstAttribute="width" constant="30" id="sca-ca-JPp"/>
+                            </constraints>
+                            <state key="normal" title="Button" image="search">
+                                <color key="titleColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="logOutButtonPressed:" destination="-1" eventType="touchUpInside" id="3ne-ze-DdT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.64313725490196072" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="55" id="Afn-LD-pG9"/>
+                        <constraint firstAttribute="trailing" secondItem="me7-w3-wxe" secondAttribute="trailing" constant="40" id="djT-oY-Lc5"/>
+                        <constraint firstItem="me7-w3-wxe" firstAttribute="top" secondItem="Lfv-Tc-pWq" secondAttribute="top" constant="15" id="gBu-KZ-l2k"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nC7-Sk-EBa">
@@ -40,19 +59,22 @@
                     <state key="normal" image="circle-hamburger"/>
                 </button>
             </subviews>
-            <color key="backgroundColor" red="0.0067950606769999998" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="fBL-ji-jA0" secondAttribute="trailing" id="2hy-t7-ebm"/>
+                <constraint firstItem="fBL-ji-jA0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6cW-3M-Bhx"/>
                 <constraint firstAttribute="trailing" secondItem="Lfv-Tc-pWq" secondAttribute="trailing" id="D0J-OA-nPV"/>
                 <constraint firstAttribute="trailing" secondItem="nC7-Sk-EBa" secondAttribute="trailing" constant="30" id="E3p-Rn-3SY"/>
                 <constraint firstItem="Lfv-Tc-pWq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="P92-B3-aMG"/>
-                <constraint firstItem="me7-w3-wxe" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bEO-HD-P8p"/>
                 <constraint firstAttribute="bottom" secondItem="nC7-Sk-EBa" secondAttribute="bottom" constant="30" id="glw-fG-DHm"/>
-                <constraint firstItem="me7-w3-wxe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="iFe-JZ-ajW"/>
+                <constraint firstItem="fBL-ji-jA0" firstAttribute="top" secondItem="Lfv-Tc-pWq" secondAttribute="bottom" constant="30" id="gzt-ZV-fep"/>
                 <constraint firstItem="Lfv-Tc-pWq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="vEj-Es-wFo"/>
+                <constraint firstItem="fBL-ji-jA0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="yxt-3o-A9s"/>
             </constraints>
         </view>
     </objects>
     <resources>
         <image name="circle-hamburger" width="512" height="512"/>
+        <image name="search" width="176" height="173"/>
     </resources>
 </document>
